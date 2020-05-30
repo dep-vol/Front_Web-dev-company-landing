@@ -1,0 +1,75 @@
+.top {
+  background:url("../img/top_fon.jpg") no-repeat;
+  background-size: cover;
+}
+
+.top__column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 659px;
+  position: relative;
+}
+
+.top__down {
+  position: absolute;
+  bottom: 70px;
+
+  font-family: $icons;
+  font-size: 25px;
+  color: $white;
+}
+
+.top__title {
+  margin-bottom: 30px;
+
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-align: center;
+  color: $white;
+}
+.top__subtitle {
+  font-size: 22px;
+  letter-spacing: 1.1px;
+  text-align: center;
+  color: $white;
+}
+
+.top__buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 72px;
+  margin-top: 108px;
+
+  .btn {
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right:0;
+    }
+  }
+}
+
+@include for-phone-only{
+  .top {}
+  .top__column {}
+  .top__down {}
+  .top__title {
+    margin-bottom: 10px;
+
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  .top__subtitle{
+
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .top__buttons {
+    padding: 0 12px;
+  }
+  .btn {}
+}

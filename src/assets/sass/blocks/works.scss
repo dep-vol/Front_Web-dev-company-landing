@@ -1,0 +1,70 @@
+@import "portfolio";
+
+.works {
+  padding: 128px 0;
+  text-align: center;
+}
+
+.works__title {
+  margin-bottom: 33px;
+
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: $black;
+}
+
+.works__subtitle {
+  margin-bottom: 110px;
+
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  color: $black;
+}
+
+.btn--works {
+  color: $black;
+
+  border-color: $active;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.works__menu {
+  margin-bottom: 120px;
+}
+
+@include for-phone-only {
+
+  .works {
+    padding: 80px 0;
+  }
+
+  .works__title {
+    margin-bottom: 10px;
+
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .works__subtitle {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .works__menu {
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  .btn--works {
+    margin-bottom: 15px;
+  }
+}

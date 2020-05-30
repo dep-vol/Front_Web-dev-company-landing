@@ -1,0 +1,87 @@
+@import "reset";
+@import "mixins/breakpoint";
+@import "vars";
+@import "fonts";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+
+  @include for-phone-only {
+    max-width: $container_xs;
+  }
+
+  @include for-tablet-portrait-up {
+    max-width: $container_sm;
+  }
+
+  @include for-tablet-landscape-up{
+    max-width: $container_md;
+  }
+
+  @include for-desktop-up {
+     max-width: $container;
+   }
+}
+
+.inner_text {
+  margin: 0 auto;
+  max-width: $text_container;
+}
+
+.btn {
+  display: inline-block;
+  padding: 21px 33px;
+
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  line-height: 22px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+
+  border: 3px solid $white;
+
+  transition: background-color .5s ease, border-color .1s ease;
+
+
+  &:hover {
+    background-color: $active;
+    border-color: transparent;
+  }
+
+  @include for-phone-only {
+    padding: 10px 20px;
+
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+
+    border: 1px solid $white;
+  }
+}
+
+@import "blocks/header";
+@import "blocks/top";
+@import "blocks/about";
+@import "blocks/services";
+@import "blocks/works";
+@import "blocks/prices";
+@import "blocks/team";
+@import "blocks/blog";
+@import "blocks/contacts";
+@import "blocks/footer";

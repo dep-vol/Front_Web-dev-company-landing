@@ -1,0 +1,83 @@
+@import "member";
+
+.team {
+  padding: 125px 0;
+
+  color: $black;
+}
+
+.team__title {
+  margin-bottom: 32px;
+
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.team__subtitle {
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+
+.team__row {
+  margin-top: 125px;
+  display: flex;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 125px;
+
+  .slick-active {
+    button {
+      background-color: $blue;
+    }
+  }
+
+  li {
+    display: block;
+    margin-right: 10px;
+
+    button {
+      display: block;
+      width: 15px;
+      height: 15px;
+      font-size: 0;
+
+      background: $active;
+      border-radius: 15px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@include for-phone-only {
+  .team {
+    padding: 80px 0;
+  }
+
+  .team__title {
+    margin-bottom: 10px;
+
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .team__row,.slick-initialized .slick-slide {
+    display: block;
+  }
+}

@@ -1,0 +1,65 @@
+@import "price";
+
+.prices {
+  padding: 125px 0;
+
+  color: $black;
+
+  background-color: $grey;
+}
+
+.prices__title {
+  margin-bottom: 25px;
+
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.prices__subtitle {
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+
+.prices__row {
+  margin-top: 125px;
+  display: flex;
+}
+
+.btn--price {
+  margin-bottom: 63px;
+
+  color: $black;
+
+  border-color: $black;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+@include for-phone-only {
+  .prices {
+    padding: 80px 0;
+  }
+  .prices__title {
+    margin-bottom: 10px;
+
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .prices__subtitle {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .prices__row {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

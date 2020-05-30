@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="124" height="24" viewBox="0 0 124 24">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 25px;
+        fill: #212121;
+        text-anchor: middle;
+        font-family: OpenSans;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <text id="Your_Logo" data-name="Your Logo" class="cls-1" x="62.429" y="17.773"><tspan x="62.429">Your Logo</tspan></text>
+</svg>

@@ -1,0 +1,124 @@
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 49px 0;
+
+  position: relative;
+
+  @media (max-width: 666px) {
+    justify-content: space-around;
+  }
+
+}
+
+.header__menu {
+  font-family: $icons;
+  font-size: 25px;
+
+  @include for-desktop-up {
+    display: none;
+  }
+}
+
+.header__nav {
+  a {
+    color: $black;
+
+    &:hover {
+      color: $active;
+    }
+  }
+
+  ul {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 1px;
+    text-align: center;
+    color: $black;
+
+    li {
+      display: inline-block;
+      padding-right: 40px;
+
+      @media (max-width: 666px) {
+        padding-right: 0;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      @include for-tablet-portrait-up{
+        padding-right: 0;
+        margin-bottom: 15px;
+        display: block;
+      }
+
+      @include for-tablet-landscape-up{
+        display: inline-block;
+        padding-right: 10px;
+      }
+
+      &:last-child {
+        padding-right: 30px;
+
+        @media (max-width: 666px) {
+          padding-right: 0;
+        }
+
+        @include for-tablet-portrait-up {
+          padding-right: 0;
+        }
+
+        @include for-tablet-landscape-up {
+          padding-right: 30px;
+        }
+      }
+    }
+
+    &:after {
+      content: "\f002";
+      font-family: $icons;
+      font-size: 20px;
+    }
+
+  }
+
+  @media (max-width: 666px) {
+    display: flex;
+    position: absolute;
+    top: -100vh;
+    width: 100%;
+    justify-content: center;
+    z-index: 5;
+
+    background-color: rgba(250,252,255,.96);
+  }
+
+  @include for-tablet-portrait-up{
+    display: flex;
+    position: absolute;
+    top: -100vh;
+    width: 100%;
+    justify-content: center;
+    z-index: 5;
+
+    background-color: rgba(250,252,255,.96);
+  }
+
+  @include for-tablet-landscape-up {
+    background-color: transparent;
+    justify-content: flex-end;
+  }
+
+  @include for-desktop-up {
+    position: static;
+
+  }
+
+  &--active_menu {
+    top: 65%;
+  }
+
+  transition: top .3s ease;
+}

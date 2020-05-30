@@ -1,0 +1,122 @@
+.services {
+  padding: 173px 0 123px 0;
+
+  background-color: $green;
+}
+
+.services__title {
+  margin-bottom: 33px;
+
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: $black;
+}
+
+.services__subtitle {
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: 0.75px;
+  text-align: center;
+  color: $black;
+}
+
+.services__row {
+  display: flex;
+  padding-top: 110px;
+  flex-wrap: wrap;
+}
+
+.service {
+  flex: 0 1 30.3333%;
+  padding: 50px;
+  margin: 0 15px 30px 15px;
+
+  text-align: center;
+
+  background-color: $white;
+
+  transition: background-color .5s ease;
+
+  &.active {
+    color: $white;
+
+    background-color: $active;
+
+    svg {
+      fill: $white;
+    }
+  }
+
+  svg {
+    width: 35px;
+    height: 60px;
+  }
+
+}
+
+.service__icon {
+
+}
+
+.service__title {
+  margin-bottom: 20px;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.service__text {
+  display: inline-block;
+  margin-bottom: 40px;
+  max-width: 271px;
+
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0.75px;
+  text-align: center;
+}
+
+.btn--service {
+  padding: 21px 14px;
+
+  color: $black;
+  border-color: $black;
+
+  &:hover {
+    color: $white;
+
+    border-color: $white;
+  }
+}
+
+@include for-phone-only {
+  .services {
+    padding: 80px 0;
+  }
+
+  .service {
+    margin: 0 10px 20px;
+    flex: 1 1 auto;
+  }
+
+  .service__title {
+    margin-bottom: 10px;
+
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .service {
+    margin: 0 10px 20px;
+    flex: 1 1 40%;
+  }
+}
